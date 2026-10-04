@@ -7,15 +7,28 @@
 </head>
 <body>
     <h1>Qual a sua nacionalidade</h1>
-    Em que Pais voce Nasceu <input type="number" name="pais" id="pais">
-    <input type="button" value="Verificar" onclick="Verificar()">
-    <div id="pais">
+    Em que Pais você nasceu <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
 
     </div>
     <script>
         function verificar () {
-            
-        }
+            let txtPais = window.document.querySelector(`input#pais`)
+            let res = window.document.querySelector(`div#res`)
+            let pais = txtPais.value
+
+            res.innerHTML = `<p>Você e natural de
+                o <strong>${pais} QUE LEGAL</strong></p>`
+
+            if (pais != 'Brasil'){
+                res.innerHTML`<p>Você não é Brasileiro</p>`
+            } else {
+            res.innerHTML += `Você é Brasileiro e adora um churrasco ?!`
+        }   res.innerHTML += `churrasquinho final de semana ?`
+    }
+
+        
     </script>
 </body>
 </html>
